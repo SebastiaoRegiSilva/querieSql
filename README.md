@@ -1,1 +1,1 @@
-# exerciciosPraticos
+# exerciciosPráticos em Queries úteis em BD's relacionais
