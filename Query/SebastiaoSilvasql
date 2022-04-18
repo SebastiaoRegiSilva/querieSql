@@ -1,0 +1,33 @@
+/* 
+	Utilizando as funções do MySql com o SELECT ou criando sua própria função com funções do MySql, 
+    receba o número do telefone da seguinte forma: 11988997766 e mostre (11)98899-7766.
+*/
+CREATE DATABASE testeFuncoes;
+
+USE testeFuncoes;
+
+-- Criando a função.
+DELIMITER $$
+	CREATE FUNCTION fnFormatarNumCel(numero VARCHAR(11))
+	RETURNS VARCHAR(14)
+	BEGIN
+		DECLARE ddd VARCHAR(4);
+        DECLARE proximoBloco VARCHAR(10);
+        DECLARE numeroFormatado VARCHAR(14);
+        
+        SET ddd = CONCAT('(', SUBSTRING(numero, 1, 2), ')');
+        SET proximoBloco = CONCAT(SUBSTRING(numero, 3, 5), '-', SUBSTRING(numero, 8, 11));
+        SET numeroFormatado = CONCAT(ddd, proximoBloco);
+        RETURN numeroFormatado;
+	END $$
+DELIMITER ;
+
+-- Dropar a função.
+DROP FUNCTION fnFormatarNumCel;
+ 
+ -- Declarar variável.
+SET @numeroCelular = '11988997766';
+SELECT @numeroCelular;
+
+-- Invocando a função.
+SELECT fnFormatarNumCel(@numeroCelular);
