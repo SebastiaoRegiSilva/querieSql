@@ -42,3 +42,6 @@ SELECT fnFormatarNumCel(@numeroCelular) telefone;
     (you *might* want to use the less safe log_bin_trust_function_creators variable).
 */
 SET GLOBAL log_bin_trust_function_creators = 1;
+
+-- Monstrar funções existentes em determinado banco de dados.
+SHOW FUNCTION STATUS WHERE db = nomedoBanco;
