@@ -22,9 +22,9 @@ CREATE TABLE cliente(
 -- CRUD para operações mobile, a sintaxe terá que ser adequada para o uso do SQLite.
 -- CREATE / INSERT.
 insert into cliente values 
-('Zé da Pena', '12345678', 'Rua das Pendangas', '144', 'Hadouken', 'Vaquejada', 'São Tomás de Aquino', 'MG', 61461.00, 8787.00),
-('Bruno Kandry', '13188030', 'Rua Carlos Chagas', '666', 'Malagasy is good', 'Jardim Amanda', 'Hortolândia', 'SP', 5000.00, 1045.00),
-('Sebastião Willian', '29161112', 'Rua Paraíso', '70', 'IPB Jardim Tropical', 'Jardim Tropical', 'Serra', 'ES', 7000.00, 5412.00);
+(null, 'Zé da Pena', '12345678', 'Rua das Pendangas', '144', 'Hadouken', 'Vaquejada', 'São Tomás de Aquino', 'MG', 61461.00, 8787.00),
+(null, 'Bruno Kandry', '13188030', 'Rua Carlos Chagas', '666', 'Malagasy is good', 'Jardim Amanda', 'Hortolândia', 'SP', 5000.00, 1045.00),
+(null, 'Sebastião Willian', '29161112', 'Rua Paraíso', '70', 'IPB Jardim Tropical', 'Jardim Tropical', 'Serra', 'ES', 7000.00, 5412.00);
 
 -- READ / SELECT. #Buscar todos cadastrados.
 select * from cliente;
