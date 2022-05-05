@@ -6,7 +6,7 @@ USE exemplo;
 
 -- Criar tabelas.
 CREATE TABLE cliente(
-	codigo int primary key auto_increment,
+	codigo int not null primary key auto_increment,
     nome VARCHAR(50) not null,
     cep VARCHAR(8) not null,
     endereco VARCHAR(50) not null,
